@@ -6,6 +6,9 @@ public class ProjectileBehaviour : MonoBehaviour
 {
     [SerializeField] private Transform portalGun;
 
+    [SerializeField] private GameObject orangeBob;
+    [SerializeField] private GameObject blueBob;
+
     [SerializeField] private GameObject orangeProjectile;
     [SerializeField] private GameObject blueProjectile;
 
@@ -15,6 +18,12 @@ public class ProjectileBehaviour : MonoBehaviour
     private float lookAngle;
 
     [SerializeField] private float speed = 4.5f;
+
+    private void Start()
+    {
+        orangeBob.GetComponent<SpriteRenderer>().enabled = true;
+        blueBob.GetComponent<SpriteRenderer>().enabled = false;
+    }
 
     void Update()
     {
@@ -37,11 +46,15 @@ public class ProjectileBehaviour : MonoBehaviour
             GameObject firedBullet = Instantiate(orangeProjectile, portalGun.position, portalGun.rotation);
             firedBullet.GetComponent<Rigidbody2D>().velocity = portalGun.up * 10f;
             orange = false;
+            orangeBob.GetComponent<SpriteRenderer>().enabled = false;
+            blueBob.GetComponent<SpriteRenderer>().enabled = true;
         } else
         {
             GameObject firedBullet = Instantiate(blueProjectile, portalGun.position, portalGun.rotation);
             firedBullet.GetComponent<Rigidbody2D>().velocity = portalGun.up * 10f;
             orange = true;
+            orangeBob.GetComponent<SpriteRenderer>().enabled = true;
+            blueBob.GetComponent<SpriteRenderer>().enabled = false;
         }
         
     }
