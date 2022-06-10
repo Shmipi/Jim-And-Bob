@@ -14,6 +14,8 @@ public class PlayerMovement : MonoBehaviour
 
     private bool movingDown;
     private bool movingUp;
+    private bool movingRight;
+    private bool movingLeft;
 
     private float moveX;
     private float moveY;
@@ -52,6 +54,32 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("movingDown", movingDown);
             animator.SetBool("movingUp", movingUp);
         }
+
+        if (moveX > 0)
+        {
+            movingRight = true;
+            movingLeft = false;
+            animator.SetBool("walkingRight", movingRight);
+            animator.SetBool("walkingLeft", movingLeft);
+        }
+
+        if (moveX == 0)
+        {
+            movingRight = false;
+            movingLeft = false;
+            animator.SetBool("walkingRight", movingRight);
+            animator.SetBool("walkingLeft", movingLeft);
+        }
+
+        if (moveX < 0)
+        {
+            movingRight = false;
+            movingLeft = true;
+            animator.SetBool("walkingRight", movingRight);
+            animator.SetBool("walkingLeft", movingLeft);
+        }
+
+
 
     }
 
