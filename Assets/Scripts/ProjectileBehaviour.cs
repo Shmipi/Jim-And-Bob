@@ -19,6 +19,13 @@ public class ProjectileBehaviour : MonoBehaviour
 
     [SerializeField] private float speed = 4.5f;
 
+    [SerializeField] GameObject target;
+
+    private void Awake()
+    {
+        transform.position = target.GetComponent<Transform>().position;
+    }
+
     private void Start()
     {
         orangeBob.GetComponent<SpriteRenderer>().enabled = true;
@@ -27,6 +34,8 @@ public class ProjectileBehaviour : MonoBehaviour
 
     void Update()
     {
+        var step = speed * Time.deltaTime;
+        transform.position = Vector3.MoveTowards(transform.position, target.GetComponent<Transform>().position, step);
 
         lookDirection = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         lookAngle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg;
