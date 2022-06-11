@@ -8,7 +8,6 @@ public class Wall : MonoBehaviour
     [SerializeField] private GameController gc;
     [SerializeField] private SpriteRenderer spriteRenderer;
     
-    [SerializeField] private Color color; //för testning
 
     private bool isOrange;
     private bool isBlue;
@@ -20,24 +19,21 @@ public class Wall : MonoBehaviour
 
     private void setWhite()
     {
-        color = Color.white;
-        spriteRenderer.color = color;
+        spriteRenderer.color = Color.white;
         isBlue = false;
         isOrange = false;
     }
 
     private void setOrange()
     {
-        color = Color.red;
-        spriteRenderer.color = color;
+        spriteRenderer.color = Color.red;
         isBlue = false;
         isOrange = true;
     }
 
     private void setBlue()
     {
-        color = Color.blue;
-        spriteRenderer.color = color;
+        spriteRenderer.color = Color.blue;
         isBlue = true;
         isOrange = false;
     }
