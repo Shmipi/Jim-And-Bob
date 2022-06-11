@@ -43,3 +43,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Player
+    uniqueID: 2368988549
+    locked: 0
+  - name: Bob
+    uniqueID: 1637753573
+    locked: 0
+  - name: Objects
+    uniqueID: 1020925401
+    locked: 0
+  - name: Mouse
+    uniqueID: 957210511
+    locked: 0
