@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProjectileBehaviour : MonoBehaviour
+public class BobBehaviour : MonoBehaviour
 {
     [SerializeField] private Transform portalGun;
 
