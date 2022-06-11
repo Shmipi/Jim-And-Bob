@@ -5,20 +5,65 @@ using UnityEngine;
 public class Wall : MonoBehaviour
 {
 
+    [SerializeField] private GameController gc;
     [SerializeField] private SpriteRenderer spriteRenderer;
+    
     [SerializeField] private Color color; //för testning
+
+    private bool isOrange;
+    private bool isBlue;
+
+    private void Start()
+    {
+        gc = gc.GetComponent<GameController>();
+    }
+
+    private void setWhite()
+    {
+        color = Color.white;
+        spriteRenderer.color = color;
+        isBlue = false;
+        isOrange = false;
+    }
+
+    private void setOrange()
+    {
+        color = Color.red;
+        spriteRenderer.color = color;
+        isBlue = false;
+        isOrange = true;
+    }
+
+    private void setBlue()
+    {
+        color = Color.blue;
+        spriteRenderer.color = color;
+        isBlue = true;
+        isOrange = false;
+    }
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.transform.tag == "OrangeProjectile")
+        if (collision.transform.tag == "OrangeProjectile" && isOrange == false && isBlue == false)
         {
-            color = Color.red;
-            spriteRenderer.color = color;
+            if (gc.orangeWall != null)
+            {
+                gc.orangeWall.setWhite();
+                gc.orangeWall = null;
+            }
+            setOrange();
+            gc.orangeWall = this;
 
-        } else if(collision.transform.tag == "BlueProjectile")
+        } else if (collision.transform.tag == "BlueProjectile" && isBlue == false && isOrange == false)
         {
-            color = Color.blue;
-            spriteRenderer.color = color;
+            if (gc.blueWall != null)
+            {
+                gc.blueWall.setWhite();
+                gc.blueWall = null;
+            }
+            setBlue();
+            gc.blueWall = this;
         }
     }
 }
