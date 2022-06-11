@@ -10,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private Animator animator;
 
+    [SerializeField] private GameController gc;
+
     private Vector2 moveDirection;
 
     private bool movingDown;
@@ -20,13 +22,12 @@ public class PlayerMovement : MonoBehaviour
     private float moveX;
     private float moveY;
 
-    // Start is called before the first frame update
-    void Start()
-    {
 
+    private void Start()
+    {
+        gc = gc.GetComponent<GameController>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         Inputs();
@@ -78,15 +79,11 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("walkingRight", movingRight);
             animator.SetBool("walkingLeft", movingLeft);
         }
-
-
-
     }
 
     void FixedUpdate()
     {
         Move();
-
     }
 
     void Inputs()
@@ -100,5 +97,36 @@ public class PlayerMovement : MonoBehaviour
     void Move()
     {
         body.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        //if(gc.orangeWall != null && gc.blueWall != null)
+        //{
+
+            Debug.Log("starty");
+
+            if(collision.gameObject == gc.orangeWall) //idk kan va fel
+            {
+                //flytta player till blå
+                if(gc.orangeWall != null && gc.blueWall != null)
+                {
+                    Debug.Log("hiiii");
+
+                    gameObject.transform.position = gc.blueWall.transform.position;
+                }
+            }
+            if (collision.gameObject == gc.blueWall) //idk kan va fel
+            {
+            //flytta player till orange
+            if (gc.orangeWall != null && gc.blueWall != null)
+            {Debug.Log("hello there");
+                gameObject.transform.position = gc.orangeWall.transform.position;
+
+            }
+
+                
+            }
+        //}
     }
 }

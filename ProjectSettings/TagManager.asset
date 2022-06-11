@@ -6,6 +6,9 @@ TagManager:
   tags:
   - OrangeProjectile
   - BlueProjectile
+  - OrangeWall
+  - BlueWall
+  - NeutralWall
   layers:
   - Default
   - TransparentFX

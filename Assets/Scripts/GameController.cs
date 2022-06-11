@@ -8,5 +8,4 @@ public class GameController : MonoBehaviour
     public Wall orangeWall = null;
     public Wall blueWall = null;
 
-
 }

@@ -178,7 +178,7 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0.20833334, y: 0.20833334, z: 0.20833334, w: 0.20833334}
+    border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
@@ -252,7 +252,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &365113316
 GameObject:
@@ -432,7 +432,7 @@ Transform:
   - {fileID: 1972616341}
   - {fileID: 1397671358}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &558963266
 MonoBehaviour:
@@ -839,6 +839,7 @@ MonoBehaviour:
   moveSpeed: 7
   body: {fileID: 1360514692}
   animator: {fileID: 1360514695}
+  gc: {fileID: 1504056581}
 --- !u!61 &1360514691
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1450,6 +1451,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6927812924966285080, guid: 7bdf6331bdce61f4a84dd04f8e6e37be, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6927812924966285082, guid: 7bdf6331bdce61f4a84dd04f8e6e37be, type: 3}
+      propertyPath: m_UsedByEffector
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6927812924966285084, guid: 7bdf6331bdce61f4a84dd04f8e6e37be, type: 3}
