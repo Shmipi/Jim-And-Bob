@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6927812924966285084}
   m_Layer: 0
   m_Name: Wall
-  m_TagString: Untagged
+  m_TagString: NeutralWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -122,5 +122,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e17fff2458f13843811138669866901, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gc: {fileID: 0}
   spriteRenderer: {fileID: 6927812924966285083}
-  color: {r: 0, g: 0, b: 0, a: 0}
