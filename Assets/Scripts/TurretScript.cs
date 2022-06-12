@@ -4,6 +4,18 @@ using UnityEngine;
 
 public class TurretScript : MonoBehaviour
 {
+
+    [SerializeField] private GameObject turret1;
+    [SerializeField] private GameObject turret2;
+
+    [SerializeField] private GameObject turretProjectile;
+
+    [SerializeField] private float startup = 0.5f;
+    [SerializeField] private float cooldown = 0.3f;
+
+    private bool fired1;
+    private bool shooting;
+
     [SerializeField] GameObject raycastOrigin;
     [SerializeField] Animator animator;
 
@@ -24,8 +36,33 @@ public class TurretScript : MonoBehaviour
 
         if (hit.transform.gameObject.tag == "Player")
         {
-            animator.SetTrigger("Active");
-            Debug.Log("Shot!");
+            if (fired1 == false)
+            {
+                PlayAnimation();
+                Invoke("FireBullet", startup);
+            }
+        }
+    }
+
+    private void PlayAnimation()
+    {
+        animator.SetTrigger("Active");
+    }
+
+    private void FireBullet()
+    {
+        if(fired1 == false)
+        {
+            GameObject firedBullet = Instantiate(turretProjectile, turret1.GetComponent<Transform>().position, turret1.GetComponent<Transform>().rotation);
+            firedBullet.GetComponent<Rigidbody2D>().velocity = turret1.GetComponent<Transform>().up * 10f;
+            fired1 = true;
+            Invoke("FireBullet", cooldown);
+
+        } else
+        {
+            GameObject firedBullet = Instantiate(turretProjectile, turret2.GetComponent<Transform>().position, turret2.GetComponent<Transform>().rotation);
+            firedBullet.GetComponent<Rigidbody2D>().velocity = turret2.GetComponent<Transform>().up * 10f;
+            fired1 = false;
         }
     }
 }

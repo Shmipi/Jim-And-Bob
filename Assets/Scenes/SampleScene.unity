@@ -1447,7 +1447,7 @@ GameObject:
   - component: {fileID: 1976364369}
   m_Layer: 7
   m_Name: Turret
-  m_TagString: Untagged
+  m_TagString: Turret
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1599,6 +1599,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2f9202a06cdda348bf6530fca3b5d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  turret1: {fileID: 2051382882}
+  turret2: {fileID: 496686821}
+  turretProjectile: {fileID: 8815115569548742225, guid: f51e5961af2acd140b2922a36dcaade1, type: 3}
+  startup: 0.5
+  cooldown: 0.3
   raycastOrigin: {fileID: 779417509}
   animator: {fileID: 1976364369}
   lineRender: {fileID: 1807137348}

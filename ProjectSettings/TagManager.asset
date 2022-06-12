@@ -9,6 +9,8 @@ TagManager:
   - OrangeWall
   - BlueWall
   - NeutralWall
+  - TurretProjectile
+  - Turret
   layers:
   - Default
   - TransparentFX
