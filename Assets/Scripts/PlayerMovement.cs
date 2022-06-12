@@ -107,17 +107,19 @@ public class PlayerMovement : MonoBehaviour
 
             if(collision.gameObject == gc.orangeWall.gameObject)
             {
-                Debug.Log("orange");
+                Debug.Log("orange to blue");
                 //flytta till blå
-                gameObject.transform.position = gc.blueWall.transform.position;
+                //gameObject.transform.position = gc.blueWall.transform.position;
+                gameObject.transform.position = gc.blueWall.transform.GetChild(0).position;
             }
 
             if (collision.gameObject == gc.blueWall.gameObject)
             {
-                Debug.Log("blue");
+                Debug.Log("blue to orange");
                 //flytta player till orange
                 //gameObject.transform.position = gc.orangeWall.transform.position;
-                gameObject.transform.position = gc.orangeWall.GetComponentInChildren<Transform>().position;
+                //gameObject.transform.position = gc.orangeWall.GetComponentInChildren<Transform>().position;
+                gameObject.transform.position = gc.orangeWall.transform.GetChild(0).position;
             }
         }
     }
