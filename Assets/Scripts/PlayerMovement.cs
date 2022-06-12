@@ -101,6 +101,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+
+        if(collision.gameObject.tag == "TurretProjectile")
+        {
+            gc.TakeDagame();
+        }
+
         if(gc.orangeWall != null && gc.blueWall != null)
         {
             Debug.Log("touched wall");

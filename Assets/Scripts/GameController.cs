@@ -15,7 +15,7 @@ public class GameController : MonoBehaviour
         health = 3;
     }
 
-    private void TakeDagame()
+    public void TakeDagame()
     {
         health -= 1;
     }
