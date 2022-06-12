@@ -101,32 +101,24 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //if(gc.orangeWall != null && gc.blueWall != null)
-        //{
+        if(gc.orangeWall != null && gc.blueWall != null)
+        {
+            Debug.Log("touched wall");
 
-            Debug.Log("starty");
-
-            if(collision.gameObject == gc.orangeWall) //idk kan va fel
+            if(collision.gameObject == gc.orangeWall.gameObject)
             {
-                //flytta player till blå
-                if(gc.orangeWall != null && gc.blueWall != null)
-                {
-                    Debug.Log("hiiii");
-
-                    gameObject.transform.position = gc.blueWall.transform.position;
-                }
+                Debug.Log("orange");
+                //flytta till blå
+                gameObject.transform.position = gc.blueWall.transform.position;
             }
-            if (collision.gameObject == gc.blueWall) //idk kan va fel
+
+            if (collision.gameObject == gc.blueWall.gameObject)
             {
-            //flytta player till orange
-            if (gc.orangeWall != null && gc.blueWall != null)
-            {Debug.Log("hello there");
-                gameObject.transform.position = gc.orangeWall.transform.position;
-
+                Debug.Log("blue");
+                //flytta player till orange
+                //gameObject.transform.position = gc.orangeWall.transform.position;
+                gameObject.transform.position = gc.orangeWall.GetComponentInChildren<Transform>().position;
             }
-
-                
-            }
-        //}
+        }
     }
 }
