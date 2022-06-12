@@ -10,9 +10,20 @@ public class GameController : MonoBehaviour
     public Wall orangeWall = null;
     public Wall blueWall = null;
 
+    [SerializeField] GameObject gameOverPanel;
+
     private void Start()
     {
+        gameOverPanel.SetActive(false);
         health = 3;
+    }
+
+    private void Update()
+    {
+        if (health <= 0)
+        {
+            gameOverPanel.SetActive(true);
+        }
     }
 
     public void TakeDagame()
