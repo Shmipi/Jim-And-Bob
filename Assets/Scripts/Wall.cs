@@ -7,6 +7,11 @@ public class Wall : MonoBehaviour
 
     [SerializeField] private GameController gc;
     [SerializeField] private SpriteRenderer spriteRenderer;
+
+
+    [SerializeField] private Sprite neutral;
+    [SerializeField] private Sprite orange;
+    [SerializeField] private Sprite blue;
     
 
     private bool isOrange;
@@ -20,6 +25,7 @@ public class Wall : MonoBehaviour
     private void setWhite()
     {
         spriteRenderer.color = Color.white;
+        //spriteRenderer.sprite = neutral;
         isBlue = false;
         isOrange = false;
     }
@@ -27,6 +33,7 @@ public class Wall : MonoBehaviour
     private void setOrange()
     {
         spriteRenderer.color = Color.red;
+        //spriteRenderer.sprite = orange;
         isBlue = false;
         isOrange = true;
     }
@@ -34,6 +41,7 @@ public class Wall : MonoBehaviour
     private void setBlue()
     {
         spriteRenderer.color = Color.blue;
+        //spriteRenderer.sprite = blue;
         isBlue = true;
         isOrange = false;
     }
