@@ -24,24 +24,24 @@ public class Wall : MonoBehaviour
 
     private void setWhite()
     {
-        spriteRenderer.color = Color.white;
-        //spriteRenderer.sprite = neutral;
+        //spriteRenderer.color = Color.white;
+        spriteRenderer.sprite = neutral;
         isBlue = false;
         isOrange = false;
     }
 
     private void setOrange()
     {
-        spriteRenderer.color = Color.red;
-        //spriteRenderer.sprite = orange;
+        //spriteRenderer.color = Color.red;
+        spriteRenderer.sprite = orange;
         isBlue = false;
         isOrange = true;
     }
 
     private void setBlue()
     {
-        spriteRenderer.color = Color.blue;
-        //spriteRenderer.sprite = blue;
+        //spriteRenderer.color = Color.blue;
+        spriteRenderer.sprite = blue;
         isBlue = true;
         isOrange = false;
     }
