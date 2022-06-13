@@ -30,54 +30,57 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        Inputs();
-
-        if (moveY < 0)
+        if(gc.isPaused == false)
         {
-            movingDown = true;
-            movingUp = false;
-            animator.SetBool("movingDown", movingDown);
-            animator.SetBool("movingUp", movingUp);
-        }
+            Inputs();
 
-        if (moveY == 0)
-        {
-            movingDown = false;
-            movingUp = false;
-            animator.SetBool("movingDown", movingDown);
-            animator.SetBool("movingUp", movingUp);
-        }
+            if (moveY < 0)
+            {
+                movingDown = true;
+                movingUp = false;
+                animator.SetBool("movingDown", movingDown);
+                animator.SetBool("movingUp", movingUp);
+            }
 
-        if (moveY > 0)
-        {
-            movingDown = false;
-            movingUp = true;
-            animator.SetBool("movingDown", movingDown);
-            animator.SetBool("movingUp", movingUp);
-        }
+            if (moveY == 0)
+            {
+                movingDown = false;
+                movingUp = false;
+                animator.SetBool("movingDown", movingDown);
+                animator.SetBool("movingUp", movingUp);
+            }
 
-        if (moveX > 0)
-        {
-            movingRight = true;
-            movingLeft = false;
-            animator.SetBool("walkingRight", movingRight);
-            animator.SetBool("walkingLeft", movingLeft);
-        }
+            if (moveY > 0)
+            {
+                movingDown = false;
+                movingUp = true;
+                animator.SetBool("movingDown", movingDown);
+                animator.SetBool("movingUp", movingUp);
+            }
 
-        if (moveX == 0)
-        {
-            movingRight = false;
-            movingLeft = false;
-            animator.SetBool("walkingRight", movingRight);
-            animator.SetBool("walkingLeft", movingLeft);
-        }
+            if (moveX > 0)
+            {
+                movingRight = true;
+                movingLeft = false;
+                animator.SetBool("walkingRight", movingRight);
+                animator.SetBool("walkingLeft", movingLeft);
+            }
 
-        if (moveX < 0)
-        {
-            movingRight = false;
-            movingLeft = true;
-            animator.SetBool("walkingRight", movingRight);
-            animator.SetBool("walkingLeft", movingLeft);
+            if (moveX == 0)
+            {
+                movingRight = false;
+                movingLeft = false;
+                animator.SetBool("walkingRight", movingRight);
+                animator.SetBool("walkingLeft", movingLeft);
+            }
+
+            if (moveX < 0)
+            {
+                movingRight = false;
+                movingLeft = true;
+                animator.SetBool("walkingRight", movingRight);
+                animator.SetBool("walkingLeft", movingLeft);
+            }
         }
     }
 

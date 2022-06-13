@@ -12,6 +12,8 @@ public class BobBehaviour : MonoBehaviour
     [SerializeField] private GameObject orangeProjectile;
     [SerializeField] private GameObject blueProjectile;
 
+    [SerializeField] private GameController gc;
+
     private bool orange = true;
 
     private Vector2 lookDirection;
@@ -34,18 +36,20 @@ public class BobBehaviour : MonoBehaviour
 
     void Update()
     {
-        var step = speed * Time.deltaTime;
-        transform.position = Vector3.MoveTowards(transform.position, target.GetComponent<Transform>().position, step);
-
-        lookDirection = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-        lookAngle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0f, 0f, lookAngle - 90f);
-
-        if (Input.GetMouseButtonDown(0))
+        if (gc.isPaused == false)
         {
-            FireBullet();
+            var step = speed * Time.deltaTime;
+            transform.position = Vector3.MoveTowards(transform.position, target.GetComponent<Transform>().position, step);
+
+            lookDirection = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+            lookAngle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(0f, 0f, lookAngle - 90f);
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                FireBullet();
+            }
         }
-        
     }
 
     private void FireBullet()
