@@ -8,7 +8,7 @@ public class TitleScript : MonoBehaviour
     [SerializeField] private Image imageRenderer;
 
     private float startTime = 0f;
-    [SerializeField] private float holdTime = 10.0f;
+    [SerializeField] private float holdTime = 0.4f;
     private float timer = 0f;
 
     [SerializeField] private Sprite img1;
