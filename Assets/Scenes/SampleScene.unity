@@ -2899,6 +2899,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 50463088568134217, guid: c15209e301dee1e48abd89ab7b8786b3, type: 3}
+      propertyPath: m_Constraints
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 50463088568134220, guid: c15209e301dee1e48abd89ab7b8786b3, type: 3}
       propertyPath: m_Name
       value: Turret
@@ -2962,11 +2966,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2931716152064314782, guid: 928fbf90bdbc5d34090bedc50f67a1d0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.732
+      value: 1.291
       objectReference: {fileID: 0}
     - target: {fileID: 2931716152064314782, guid: 928fbf90bdbc5d34090bedc50f67a1d0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.292
+      value: -0.854
       objectReference: {fileID: 0}
     - target: {fileID: 2931716152064314782, guid: 928fbf90bdbc5d34090bedc50f67a1d0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3271,11 +3275,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9138256025726265573, guid: e945cc4cc96390f4794652517ddd496f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.593
+      value: 2.296
       objectReference: {fileID: 0}
     - target: {fileID: 9138256025726265573, guid: e945cc4cc96390f4794652517ddd496f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.44
+      value: -0.849
       objectReference: {fileID: 0}
     - target: {fileID: 9138256025726265573, guid: e945cc4cc96390f4794652517ddd496f, type: 3}
       propertyPath: m_LocalPosition.z
