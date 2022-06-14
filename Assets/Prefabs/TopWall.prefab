@@ -56,9 +56,9 @@ MonoBehaviour:
   m_AlphaBlendOnOverlap: 0
   m_ShadowIntensity: 0
   m_ShadowVolumeIntensity: 0
-  m_PointLightInnerAngle: 49.08
-  m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 0.38
+  m_PointLightInnerAngle: 89
+  m_PointLightOuterAngle: 187
+  m_PointLightInnerRadius: 0.35
   m_PointLightOuterRadius: 1
   m_PointLightDistance: 3
   m_PointLightQuality: 1
@@ -128,9 +128,9 @@ MonoBehaviour:
   m_AlphaBlendOnOverlap: 0
   m_ShadowIntensity: 0
   m_ShadowVolumeIntensity: 0
-  m_PointLightInnerAngle: 49.08
-  m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 0.38
+  m_PointLightInnerAngle: 89
+  m_PointLightOuterAngle: 187
+  m_PointLightInnerRadius: 0.35
   m_PointLightOuterRadius: 1
   m_PointLightDistance: 3
   m_PointLightQuality: 1
@@ -217,8 +217,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1020925401
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 3219956385180743081, guid: 234bf9cb3ca73c34cba8bf4e42e2ea46, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
