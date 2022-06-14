@@ -15,18 +15,25 @@ public class TitleScript : MonoBehaviour
     [SerializeField] private Sprite img2;
     [SerializeField] private Sprite img3;
 
-    private bool switchImage = false;
-    private bool timeToSwitch = true;
-    private bool middlePhase = false;
-    private bool finalPhase = false;
-    private bool backCycle = false;
+    private bool switchImage;
+    private bool timeToSwitch;
+    private bool middlePhase;
+    private bool finalPhase;
+    private bool backCycle;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
+
         imageRenderer.sprite = img1;
         startTime = Time.time;
         timer = startTime;
+
+        switchImage = false;
+        timeToSwitch = true;
+        middlePhase = false;
+        finalPhase = false;
+        backCycle = false;
+
     }
 
     // Update is called once per frame
