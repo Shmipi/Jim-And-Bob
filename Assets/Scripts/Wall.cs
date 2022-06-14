@@ -12,6 +12,9 @@ public class Wall : MonoBehaviour
     [SerializeField] private Sprite neutral;
     [SerializeField] private Sprite orange;
     [SerializeField] private Sprite blue;
+
+    [SerializeField] private GameObject orangeLight;
+    [SerializeField] private GameObject blueLight;
     
 
     private bool isOrange;
@@ -28,6 +31,9 @@ public class Wall : MonoBehaviour
         spriteRenderer.sprite = neutral;
         isBlue = false;
         isOrange = false;
+        orangeLight.SetActive(false);
+        blueLight.SetActive(false);
+
     }
 
     private void setOrange()
@@ -36,6 +42,7 @@ public class Wall : MonoBehaviour
         spriteRenderer.sprite = orange;
         isBlue = false;
         isOrange = true;
+        orangeLight.SetActive(true);
     }
 
     private void setBlue()
@@ -44,6 +51,7 @@ public class Wall : MonoBehaviour
         spriteRenderer.sprite = blue;
         isBlue = true;
         isOrange = false;
+        blueLight.SetActive(true);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
