@@ -15,13 +15,19 @@ public class PressurePlateScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        gameObject.GetComponent<SpriteRenderer>().color = pressedColor;
-        Debug.Log("pressed!");
+        if(collision.gameObject.tag == "Crate")
+        {
+            gameObject.GetComponent<SpriteRenderer>().color = pressedColor;
+            Debug.Log("pressed!");
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        gameObject.GetComponent<SpriteRenderer>().color = defaultColor;
-        Debug.Log("unpressed!");
+        if(collision.gameObject.tag == "Crate")
+        {
+            gameObject.GetComponent<SpriteRenderer>().color = defaultColor;
+            Debug.Log("unpressed!");
+        }
     }
 }

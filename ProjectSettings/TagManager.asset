@@ -11,6 +11,7 @@ TagManager:
   - NeutralWall
   - TurretProjectile
   - Turret
+  - Crate
   layers:
   - Default
   - TransparentFX
