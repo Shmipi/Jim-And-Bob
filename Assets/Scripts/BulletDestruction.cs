@@ -21,38 +21,38 @@ public class BulletDestruction : MonoBehaviour
         {
             if (collision.gameObject == gc.orangeWall.gameObject)
             {
-                gameObject.transform.position = gc.blueWall.transform.GetChild(0).position;
+                gameObject.transform.position = gc.blueWall.transform.GetChild(1).position;
 
                 //gameObject.GetComponent<Rigidbody2D>().velocity = gc.blueWall.transform.GetChild(0).GetComponent<Transform>().up * -10f;
 
-                if(gc.blueWall.transform.position.x > gc.blueWall.transform.GetChild(0).position.x)
+                if(gc.blueWall.transform.position.x > gc.blueWall.transform.GetChild(1).position.x)
                 {
                     //this is a side wall
-                    gameObject.GetComponent<Rigidbody2D>().velocity = gc.blueWall.transform.GetChild(0).GetComponent<Transform>().right * -10f;
+                    gameObject.GetComponent<Rigidbody2D>().velocity = gc.blueWall.transform.GetChild(1).GetComponent<Transform>().right * -10f;
                 }
                 else
                 {
                     //this is a top wall
-                    gameObject.GetComponent<Rigidbody2D>().velocity = gc.orangeWall.transform.GetChild(0).GetComponent<Transform>().up * -10f;
+                    gameObject.GetComponent<Rigidbody2D>().velocity = gc.orangeWall.transform.GetChild(1).GetComponent<Transform>().up * -10f;
                 }
 
             }
             else if (collision.gameObject == gc.blueWall.gameObject)
             {
-                gameObject.transform.position = gc.orangeWall.transform.GetChild(0).position;
+                gameObject.transform.position = gc.orangeWall.transform.GetChild(1).position;
 
                 //gc.orangeWall.GetComponentInChildren<Transform>().up; // funkar också
                 //gameObject.GetComponent<Rigidbody2D>().velocity = gc.orangeWall.transform.GetChild(0).GetComponent<Transform>().up * -10f;
 
-                if (gc.orangeWall.transform.position.x > gc.orangeWall.transform.GetChild(0).position.x)
+                if (gc.orangeWall.transform.position.x > gc.orangeWall.transform.GetChild(1).position.x)
                 {
                     //this is a side wall
-                    gameObject.GetComponent<Rigidbody2D>().velocity = gc.orangeWall.transform.GetChild(0).GetComponent<Transform>().right * -10f;
+                    gameObject.GetComponent<Rigidbody2D>().velocity = gc.orangeWall.transform.GetChild(1).GetComponent<Transform>().right * -10f;
                 }
                 else
                 {
                     //this is a top wall
-                    gameObject.GetComponent<Rigidbody2D>().velocity = gc.orangeWall.transform.GetChild(0).GetComponent<Transform>().up * -10f;
+                    gameObject.GetComponent<Rigidbody2D>().velocity = gc.orangeWall.transform.GetChild(1).GetComponent<Transform>().up * -10f;
                 }
             }
             else
