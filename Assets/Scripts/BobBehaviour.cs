@@ -23,6 +23,9 @@ public class BobBehaviour : MonoBehaviour
 
     [SerializeField] GameObject target;
 
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip shoot;
+
     private void Awake()
     {
         transform.position = target.GetComponent<Transform>().position;
@@ -54,6 +57,7 @@ public class BobBehaviour : MonoBehaviour
 
     private void FireBullet()
     {
+        audioSource.PlayOneShot(shoot);
         if(orange == true)
         {
             GameObject firedBullet = Instantiate(orangeProjectile, portalGun.position, portalGun.rotation);

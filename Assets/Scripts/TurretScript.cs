@@ -19,6 +19,10 @@ public class TurretScript : MonoBehaviour
     [SerializeField] GameObject raycastOrigin;
     [SerializeField] Animator animator;
 
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip alert;
+    [SerializeField] AudioClip shot;
+
     [SerializeField] private GameObject lineRender;
     private LineRenderer lr;
 
@@ -36,10 +40,17 @@ public class TurretScript : MonoBehaviour
 
         if (hit.transform.gameObject.tag == "Player")
         {
+
+            if(shooting == false)
+            {
+                audioSource.PlayOneShot(alert);
+            }
+
             if (fired1 == false)
             {
                 PlayAnimation();
                 Invoke("FireBullet", startup);
+                shooting = true;
             }
         }
     }
@@ -55,6 +66,7 @@ public class TurretScript : MonoBehaviour
         {
             GameObject firedBullet = Instantiate(turretProjectile, turret1.GetComponent<Transform>().position, turret1.GetComponent<Transform>().rotation);
             firedBullet.GetComponent<Rigidbody2D>().velocity = turret1.GetComponent<Transform>().up * 10f;
+            audioSource.PlayOneShot(shot);
             fired1 = true;
             Invoke("FireBullet", cooldown);
 
@@ -62,7 +74,9 @@ public class TurretScript : MonoBehaviour
         {
             GameObject firedBullet = Instantiate(turretProjectile, turret2.GetComponent<Transform>().position, turret2.GetComponent<Transform>().rotation);
             firedBullet.GetComponent<Rigidbody2D>().velocity = turret2.GetComponent<Transform>().up * 10f;
+            audioSource.PlayOneShot(shot);
             fired1 = false;
+            shooting = false;
         }
     }
 }
