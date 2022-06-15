@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Wall : MonoBehaviour
 {
-
     [SerializeField] private GameController gc;
     [SerializeField] private SpriteRenderer spriteRenderer;
 
@@ -15,14 +14,33 @@ public class Wall : MonoBehaviour
 
     [SerializeField] private GameObject orangeLight;
     [SerializeField] private GameObject blueLight;
-    
+
+    private BoxCollider2D[] colliders;
+    private BoxCollider2D halfCollider;
+
+    private GameObject player;
 
     private bool isOrange;
     private bool isBlue;
 
+    private Animator animator;
+
     private void Start()
     {
         gc = gc.GetComponent<GameController>();
+
+        player = GameObject.FindGameObjectWithTag("Player");
+
+        if(gameObject.tag == "TopWall")
+        {
+            colliders = gameObject.GetComponents<BoxCollider2D>();
+            halfCollider = colliders[1];
+            Physics2D.IgnoreCollision(player.GetComponent<Collider2D>(), halfCollider);
+
+            animator = gameObject.GetComponent<Animator>();
+            animator.SetBool("isOrange", false);
+            animator.SetBool("isBlue", false);
+        }
     }
 
     private void setWhite()
@@ -34,6 +52,11 @@ public class Wall : MonoBehaviour
         orangeLight.SetActive(false);
         blueLight.SetActive(false);
 
+        if(gameObject.tag == "TopWall")
+        {
+            animator.SetBool("isOrange", false);
+            animator.SetBool("isBlue", false);
+        }
     }
 
     private void setOrange()
@@ -43,6 +66,11 @@ public class Wall : MonoBehaviour
         isBlue = false;
         isOrange = true;
         orangeLight.SetActive(true);
+
+        if(gameObject.tag == "TopWall")
+        {
+            animator.SetBool("isOrange", true);
+        }
     }
 
     private void setBlue()
@@ -52,6 +80,11 @@ public class Wall : MonoBehaviour
         isBlue = true;
         isOrange = false;
         blueLight.SetActive(true);
+
+        if(gameObject.tag == "TopWall")
+        {
+            animator.SetBool("isBlue", true);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

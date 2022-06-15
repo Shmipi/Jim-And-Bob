@@ -12,6 +12,8 @@ TagManager:
   - TurretProjectile
   - Turret
   - Crate
+  - TopWall
+  - SideWall
   layers:
   - Default
   - TransparentFX
@@ -52,14 +54,17 @@ TagManager:
   - name: PressurePlate
     uniqueID: 1722959121
     locked: 0
+  - name: Objects
+    uniqueID: 1020925401
+    locked: 0
+  - name: Projectiles
+    uniqueID: 503655323
+    locked: 0
   - name: Player
     uniqueID: 2368988549
     locked: 0
   - name: Bob
     uniqueID: 1637753573
-    locked: 0
-  - name: Objects
-    uniqueID: 1020925401
     locked: 0
   - name: Mouse
     uniqueID: 957210511

@@ -12,8 +12,8 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private GameController gc;
 
-    [SerializeField] private AudioSource audioSource;
-    [SerializeField] private AudioClip walking;
+    public AudioSource audioSource;
+    public AudioClip walking;
 
     private Vector2 moveDirection;
 
