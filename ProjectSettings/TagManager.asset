@@ -14,6 +14,7 @@ TagManager:
   - Crate
   - TopWall
   - SideWall
+  - PressurePlate
   layers:
   - Default
   - TransparentFX
@@ -56,6 +57,9 @@ TagManager:
     locked: 0
   - name: Objects
     uniqueID: 1020925401
+    locked: 0
+  - name: Laser
+    uniqueID: 3730849729
     locked: 0
   - name: Projectiles
     uniqueID: 503655323
