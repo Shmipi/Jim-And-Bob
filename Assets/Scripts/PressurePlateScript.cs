@@ -5,14 +5,15 @@ using UnityEngine;
 public class PressurePlateScript : MonoBehaviour
 {
 
-    [SerializeField] private Color defaultColor;
-    [SerializeField] private Color pressedColor;
+    [SerializeField] private Sprite defaultSprite;
+    [SerializeField] private Sprite pressedSprite;
+
     [SerializeField] private GameController gc;
     [SerializeField] private GameObject door;
 
     private void Start()
     {
-        gameObject.GetComponent<SpriteRenderer>().color = defaultColor;
+        gameObject.GetComponent<SpriteRenderer>().sprite = defaultSprite;
         door.SetActive(true);
     }
 
@@ -20,7 +21,7 @@ public class PressurePlateScript : MonoBehaviour
     {
         if(collision.gameObject.tag == "Crate")
         {
-            gameObject.GetComponent<SpriteRenderer>().color = pressedColor;
+            gameObject.GetComponent<SpriteRenderer>().sprite = pressedSprite;
             gc.levelComplete = true;
             door.SetActive(false);
             
@@ -32,7 +33,7 @@ public class PressurePlateScript : MonoBehaviour
     {
         if(collision.gameObject.tag == "Crate")
         {
-            gameObject.GetComponent<SpriteRenderer>().color = defaultColor;
+            gameObject.GetComponent<SpriteRenderer>().sprite = defaultSprite;
             gc.levelComplete = false;
             door.SetActive(true);
 
