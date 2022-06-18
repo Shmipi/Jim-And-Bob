@@ -7,10 +7,13 @@ public class PressurePlateScript : MonoBehaviour
 
     [SerializeField] private Color defaultColor;
     [SerializeField] private Color pressedColor;
+    [SerializeField] private GameController gc;
+    [SerializeField] private GameObject door;
 
     private void Start()
     {
         gameObject.GetComponent<SpriteRenderer>().color = defaultColor;
+        door.SetActive(true);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -18,7 +21,10 @@ public class PressurePlateScript : MonoBehaviour
         if(collision.gameObject.tag == "Crate")
         {
             gameObject.GetComponent<SpriteRenderer>().color = pressedColor;
-            Debug.Log("pressed!");
+            gc.levelComplete = true;
+            door.SetActive(false);
+            
+            //Debug.Log("pressed!" + gc.levelComplete);
         }
     }
 
@@ -27,7 +33,10 @@ public class PressurePlateScript : MonoBehaviour
         if(collision.gameObject.tag == "Crate")
         {
             gameObject.GetComponent<SpriteRenderer>().color = defaultColor;
-            Debug.Log("unpressed!");
+            gc.levelComplete = false;
+            door.SetActive(true);
+
+            //Debug.Log("unpressed!" + gc.levelComplete);
         }
     }
 }

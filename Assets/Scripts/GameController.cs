@@ -11,6 +11,7 @@ public class GameController : MonoBehaviour
     public Wall blueWall = null;
 
     public bool isPaused;
+    public bool levelComplete;
 
     [SerializeField] GameObject gameOverPanel;
 
@@ -20,6 +21,7 @@ public class GameController : MonoBehaviour
         isPaused = false;
         health = 3;
         Time.timeScale = 1;
+        levelComplete = false;
     }
 
     private void Update()
