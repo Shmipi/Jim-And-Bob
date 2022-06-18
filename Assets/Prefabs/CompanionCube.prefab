@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 2931716152064314783}
   - component: {fileID: 2931716152064314780}
   - component: {fileID: 2931716152064314781}
+  - component: {fileID: 7845200186653623019}
   m_Layer: 0
   m_Name: CompanionCube
-  m_TagString: Untagged
+  m_TagString: Crate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -71,7 +72,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1020925401
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 920216bc634260849abfa68fa3c2fb03, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -131,3 +132,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &7845200186653623019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2931716152064314786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 015e1bb09e37d2a42bf9bab4210246cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gc: {fileID: 7211898148593100847, guid: 8ac676962a124374fb7c97aafe6f59c6, type: 3}

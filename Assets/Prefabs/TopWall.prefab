@@ -272,7 +272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e17fff2458f13843811138669866901, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gc: {fileID: 0}
+  gc: {fileID: 7211898148593100847, guid: 8ac676962a124374fb7c97aafe6f59c6, type: 3}
   spriteRenderer: {fileID: 3301562243370557074}
   neutral: {fileID: 4521688529146389212, guid: d8cf46634d035bb4d86dc8603d533152, type: 3}
   orange: {fileID: 8792549058883088550, guid: d8cf46634d035bb4d86dc8603d533152, type: 3}

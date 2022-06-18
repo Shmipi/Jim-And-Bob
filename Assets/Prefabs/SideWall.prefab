@@ -270,14 +270,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e17fff2458f13843811138669866901, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gc: {fileID: 0}
+  gc: {fileID: 7211898148593100847, guid: 8ac676962a124374fb7c97aafe6f59c6, type: 3}
   spriteRenderer: {fileID: 2654278625624106000}
   neutral: {fileID: -8628347792048532950, guid: 1b2400dc350774741a127e198ccaa030, type: 3}
   orange: {fileID: 8819274055397091216, guid: 1b2400dc350774741a127e198ccaa030, type: 3}
   blue: {fileID: 905374281242213440, guid: 1b2400dc350774741a127e198ccaa030, type: 3}
   orangeLight: {fileID: 1630557840}
   blueLight: {fileID: 697729936}
-  halfCollider: {fileID: 0}
 --- !u!1 &6128248878207545867
 GameObject:
   m_ObjectHideFlags: 0
