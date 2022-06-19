@@ -16,6 +16,7 @@ TagManager:
   - SideWall
   - PressurePlate
   - Spawn
+  - GameMusic
   layers:
   - Default
   - TransparentFX

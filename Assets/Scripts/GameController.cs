@@ -22,6 +22,8 @@ public class GameController : MonoBehaviour
         health = 3;
         Time.timeScale = 1;
         levelComplete = false;
+        orangeWall = null;
+        blueWall = null;
     }
 
     private void Update()
