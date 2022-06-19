@@ -180,7 +180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 5474166635968708166, guid: 6ed099d4e9d57ac4b8df673fca93be59, type: 3}
+  m_Sprite: {fileID: 240606920477337269, guid: 68e28f1f67acd024e8d3a16cab4bc423, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -668,7 +668,7 @@ GameObject:
   - component: {fileID: 754342910}
   - component: {fileID: 754342909}
   m_Layer: 5
-  m_Name: OptionsButton
+  m_Name: CreditsButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1209,7 +1209,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 3769645376892953767, guid: 6ed099d4e9d57ac4b8df673fca93be59, type: 3}
+  m_Sprite: {fileID: -7606714729332684644, guid: 68e28f1f67acd024e8d3a16cab4bc423, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1623,7 +1623,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 6539946487010444138, guid: 6ed099d4e9d57ac4b8df673fca93be59, type: 3}
+  m_Sprite: {fileID: -8004837519193516052, guid: 68e28f1f67acd024e8d3a16cab4bc423, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2091,7 +2091,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 6539946487010444138, guid: 6ed099d4e9d57ac4b8df673fca93be59, type: 3}
+  m_Sprite: {fileID: 2302704687298680855, guid: 68e28f1f67acd024e8d3a16cab4bc423, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
