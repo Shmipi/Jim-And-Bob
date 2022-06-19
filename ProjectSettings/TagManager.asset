@@ -15,6 +15,7 @@ TagManager:
   - TopWall
   - SideWall
   - PressurePlate
+  - Spawn
   layers:
   - Default
   - TransparentFX

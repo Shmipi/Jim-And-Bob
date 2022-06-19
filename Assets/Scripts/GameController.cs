@@ -35,7 +35,7 @@ public class GameController : MonoBehaviour
         }
     }
 
-    public void TakeDagame()
+    public void TakeDamage()
     {
         health -= 1;
     }

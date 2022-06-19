@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private GameController gc;
 
+    [SerializeField] private GameObject spawnPoint;
+
     public AudioSource audioSource;
     public AudioClip walking;
 
@@ -28,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
+        transform.position = spawnPoint.transform.position;
         gc = gc.GetComponent<GameController>();
     }
 
@@ -110,7 +113,7 @@ public class PlayerMovement : MonoBehaviour
 
         if(collision.gameObject.tag == "TurretProjectile")
         {
-            gc.TakeDagame();
+            gc.TakeDamage();
         }
 
         if(gc.orangeWall != null && gc.blueWall != null)
