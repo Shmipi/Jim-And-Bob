@@ -8,6 +8,7 @@ public class MenuButtonScript : MonoBehaviour
 
     [SerializeField] GameObject LevelSelectPane;
     [SerializeField] GameObject ButtonPane;
+    [SerializeField] GameObject CreditsPane;
 
     public void StartGame()
     {
@@ -34,6 +35,18 @@ public class MenuButtonScript : MonoBehaviour
     {
         LevelSelectPane.SetActive(false);
         ButtonPane.SetActive(true);
+    }
+
+    public void Credits()
+    {
+        ButtonPane.SetActive(false);
+        CreditsPane.SetActive(true);
+    }
+
+    public void CreditBackButton()
+    {
+        ButtonPane.SetActive(true);
+        CreditsPane.SetActive(false);
     }
 
     public void QuitGame()
