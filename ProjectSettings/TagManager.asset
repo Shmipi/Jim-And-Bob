@@ -63,11 +63,11 @@ TagManager:
   - name: Laser
     uniqueID: 3730849729
     locked: 0
-  - name: Projectiles
-    uniqueID: 503655323
-    locked: 0
   - name: Player
     uniqueID: 2368988549
+    locked: 0
+  - name: Projectiles
+    uniqueID: 503655323
     locked: 0
   - name: Bob
     uniqueID: 1637753573

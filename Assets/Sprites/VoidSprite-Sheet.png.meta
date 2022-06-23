@@ -8,6 +8,24 @@ TextureImporter:
   - first:
       213: 5085143388511002561
     second: VoidSprite-Sheet_1
+  - first:
+      213: 6434530911840222327
+    second: VoidSprite-Sheet_2
+  - first:
+      213: -2016812213657918550
+    second: VoidSprite-Sheet_3
+  - first:
+      213: -1142402326527590704
+    second: VoidSprite-Sheet_4
+  - first:
+      213: 214644051151047547
+    second: VoidSprite-Sheet_5
+  - first:
+      213: 1617822662611165346
+    second: VoidSprite-Sheet_6
+  - first:
+      213: 5962064793135469916
+    second: VoidSprite-Sheet_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -160,7 +178,7 @@ TextureImporter:
         x: 57
         y: 10
         width: 30
-        height: 28
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -170,6 +188,132 @@ TextureImporter:
       bones: []
       spriteID: 1cfdf1838fe029640800000000000000
       internalID: 5085143388511002561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VoidSprite-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 10
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77cb180d5cb0c4950800000000000000
+      internalID: 6434530911840222327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VoidSprite-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 10
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa3204a2af7d204e0800000000000000
+      internalID: -2016812213657918550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VoidSprite-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 10
+        width: 30
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0de3eb0032f5520f0800000000000000
+      internalID: -1142402326527590704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VoidSprite-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 10
+        width: 30
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7b420690a19af200800000000000000
+      internalID: 214644051151047547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VoidSprite-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 10
+        width: 30
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a0e38ad329a37610800000000000000
+      internalID: 1617822662611165346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VoidSprite-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 10
+        width: 30
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c55d3ba47528db250800000000000000
+      internalID: 5962064793135469916
       vertices: []
       indices: 
       edges: []

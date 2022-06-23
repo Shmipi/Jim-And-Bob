@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -24,6 +25,12 @@ public class GameController : MonoBehaviour
         levelComplete = false;
         orangeWall = null;
         blueWall = null;
+
+        if(SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            Cursor.visible = true;
+        }
+
     }
 
     private void Update()
