@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class TurretScript : MonoBehaviour
 {
+    [SerializeField] private float rotateSpeed;
+    [SerializeField] private float rotate;
 
     [SerializeField] private GameObject turret1;
     [SerializeField] private GameObject turret2;
@@ -15,6 +17,8 @@ public class TurretScript : MonoBehaviour
 
     private bool fired1;
     private bool shooting;
+
+    private bool colliding;
 
     [SerializeField] GameObject raycastOrigin;
     [SerializeField] Animator animator;
@@ -55,6 +59,19 @@ public class TurretScript : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if(colliding == true)
+        {
+            rotate = Input.GetAxis("Horizontal2") * -rotateSpeed * Time.deltaTime;
+        }
+    }
+
+    private void LateUpdate()
+    {
+        transform.Rotate(0f, 0f, rotate);
+    }
+
     private void PlayAnimation()
     {
         animator.SetTrigger("Active");
@@ -79,4 +96,21 @@ public class TurretScript : MonoBehaviour
             shooting = false;
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            colliding = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            colliding = false;
+        }
+    }
+
 }
