@@ -65,6 +65,11 @@ public class TurretScript : MonoBehaviour
         {
             rotate = Input.GetAxis("Horizontal2") * -rotateSpeed * Time.deltaTime;
         }
+
+        if(colliding == false)
+        {
+            rotate = 0f;
+        }
     }
 
     private void LateUpdate()
