@@ -6850,7 +6850,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelToLoad: 1
-  gc: {fileID: 7211898148593100847, guid: 8ac676962a124374fb7c97aafe6f59c6, type: 3}
+  gc: {fileID: 225752968}
 --- !u!4 &1969399704
 Transform:
   m_ObjectHideFlags: 0
