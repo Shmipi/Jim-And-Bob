@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
 
     public AudioSource audioSource;
     public AudioClip walking;
+    public bool isTeleported;
 
     private Vector2 moveDirection;
 
@@ -27,11 +28,12 @@ public class PlayerMovement : MonoBehaviour
     private float moveX;
     private float moveY;
 
-
+    
     private void Start()
     {
         transform.position = spawnPoint.transform.position;
         gc = gc.GetComponent<GameController>();
+        isTeleported = false;
     }
 
     void Update()
@@ -122,12 +124,14 @@ public class PlayerMovement : MonoBehaviour
             {
                 //flytta till blå
                 gameObject.transform.position = gc.blueWall.transform.GetChild(0).position;
+                isTeleported = true;
             }
 
             if (collision.gameObject == gc.blueWall.gameObject)
             {
                 //flytta till orange
                 gameObject.transform.position = gc.orangeWall.transform.GetChild(0).position;
+                isTeleported = true;
             }
         }
     }
