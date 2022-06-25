@@ -748,11 +748,11 @@ Transform:
   - {fileID: 1120514004}
   - {fileID: 1401720956}
   - {fileID: 477595537}
-  - {fileID: 55454953}
   - {fileID: 635485507}
+  - {fileID: 55454953}
   - {fileID: 712295592}
-  - {fileID: 70219649}
   - {fileID: 1817476792}
+  - {fileID: 70219649}
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2800,6 +2800,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &806323906 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8665285325103362747, guid: 1b3b20dfd8b9239438e50d950374a881, type: 3}
+  m_PrefabInstance: {fileID: 806323897}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 806323899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e74c3130c5fefb43b8749f76c1a351e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &842756351
 GameObject:
   m_ObjectHideFlags: 0
@@ -5488,6 +5499,51 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0c1358267edb0b4ab987d7067bc0a14, type: 3}
+--- !u!1 &1469119519
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1469119520}
+  - component: {fileID: 1469119521}
+  m_Layer: 0
+  m_Name: TutorialController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1469119520
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1469119519}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1469119521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1469119519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f4fcf06df757104a9eef45a200d8b45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gc: {fileID: 225752968}
+  pm: {fileID: 806323906}
 --- !u!1001 &1478091448
 PrefabInstance:
   m_ObjectHideFlags: 0

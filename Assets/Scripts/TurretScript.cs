@@ -17,8 +17,9 @@ public class TurretScript : MonoBehaviour
 
     private bool fired1;
     private bool shooting;
-
     private bool colliding;
+
+    public bool isSpinning;
 
     [SerializeField] GameObject raycastOrigin;
     [SerializeField] Animator animator;
@@ -64,6 +65,16 @@ public class TurretScript : MonoBehaviour
         if(colliding == true)
         {
             rotate = Input.GetAxis("Horizontal2") * -rotateSpeed * Time.deltaTime;
+        }
+        
+        if(rotate != 0)
+        {
+            isSpinning = true;
+        }
+
+        if(rotate == 0)
+        {
+            isSpinning = false;
         }
 
         if(colliding == false)

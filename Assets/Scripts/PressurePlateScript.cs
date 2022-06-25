@@ -24,7 +24,6 @@ public class PressurePlateScript : MonoBehaviour
             gameObject.GetComponent<SpriteRenderer>().sprite = pressedSprite;
             gc.levelComplete = true;
             door.SetActive(false);
-            
             //Debug.Log("pressed!" + gc.levelComplete);
         }
     }
